@@ -9,3 +9,7 @@ html {
     font-family: 'Fjalla one', sans-serif;
     animation: fadein 1.5s;
 } 
+
+.calculator {
+    border: 1px solid;
+}
