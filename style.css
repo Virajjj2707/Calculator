@@ -1,0 +1,11 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    background-color: rgb(23, 24, 37);
+    font-family: 'Fjalla one', sans-serif;
+    animation: fadein 1.5s;
+} 
