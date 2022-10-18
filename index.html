@@ -25,43 +25,87 @@
   </head>
   <body>
     <div class="container">
-      <h1 style="color: yellow">Calculator</h1>
-      <div class="Calculator"></div>
-      <input type="text" name="screen" id="answer" readonly />
-      <tr class="table">
-        <td><button>(</button></td>
-        <td><button>)</button></td>
-        <td><button>C</button></td>
-        <td><button>%</button></td>
-      </tr>
-      <tr>
-        <td><button>7</button></td>
-        <td><button>8</button></td>
-        <td><button>9</button></td>
-        <td><button>X</button></td>
-      </tr>
-      <tr>
-        <td><button>4</button></td>
-        <td><button>5</button></td>
-        <td><button>6</button></td>
-        <td><button>-</button></td>
-      </tr>
-      <tr>
-        <td><button>1</button></td>
-        <td><button>2</button></td>
-        <td><button>3</button></td>
-        <td><button>+</button></td>
-      </tr>
-      <tr>
-        <td><button>0</button></td>
-        <td><button style="font: bold">.</button></td>
-        <td><button>/</button></td>
-        <td><button>=</button></td>
-      </tr>
+      <h1>
+        <a
+          style="text-decoration: none; color: #f1c40f; margin-left: 0.25rem"
+          href=""
+          onclick="location.reload();"
+          >CALCULATOR</a
+        >
+      </h1>
+      <div class="calculator">
+        <input type="text" name="screen" id="answer" readonly />
+        <table>
+          <tr>
+            <td><button>(</button></td>
+            <td><button>)</button></td>
+            <td>
+              <button
+                style="
+                  background-color: #f01600;
+                  font-weight: bold;
+                  color: #ecf0f1;
+                "
+              >
+                C
+              </button>
+            </td>
+            <td><button>%</button></td>
+          </tr>
+          <tr>
+            <td><button>7</button></td>
+            <td><button>8</button></td>
+            <td><button>9</button></td>
+            <td><button>X</button></td>
+          </tr>
+          <tr>
+            <td><button>4</button></td>
+            <td><button>5</button></td>
+            <td><button>6</button></td>
+            <td><button>-</button></td>
+          </tr>
+          <tr>
+            <td><button>1</button></td>
+            <td><button>2</button></td>
+            <td><button>3</button></td>
+            <td><button>+</button></td>
+          </tr>
+          <tr>
+            <td><button>0</button></td>
+            <td><button style="font-weight: bold">.</button></td>
+            <td><button>/</button></td>
+            <td>
+              <button
+                style="
+                  background-color: #25db72;
+                  font-weight: bold;
+                  color: #ecf0f1;
+                "
+              >
+                =
+              </button>
+            </td>
+          </tr>
+        </table>
+        <hr style="max-width: 50vw" />
+        <div
+          style="
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          Made with <img style="margin: 0.15rem" src="heart.png" />by<a
+            style="text-decoration: none; color: #f1c40f; margin-left: 0.25rem"
+            target="_blank"
+            href="https://github.com/Virajjj2707"
+            >Viraj Vadhane</a
+          >
+        </div>
+      </div>
     </div>
-    <div>
-      <h1>Made by Viraj</h1>
-    </div>
+    <div id="turn">PLEASE TURN YOUR DEVICE</div>
   </body>
   <script src="calc.js"></script>
 </html>
