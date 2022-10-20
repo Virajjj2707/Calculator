@@ -15,7 +15,7 @@ for (item of buttons) {
             screenValue = "";
             screen.value = screenValue;
         } else if (buttonText == "=") {
-            checkForBracketMulti(); // automatically evaluates values if no brackets
+            checkForBracketMulti(); // automatically gets the value if no brackets
         } else {
             screenValue += buttonText;
             screen.value = screenValue;
@@ -35,4 +35,19 @@ document.getElementById("keydown", function(event){
                 event.key += "*"
                 screen.value = screenValue
             } 
+            if (
+                event.key <= 9 ||
+                event.key == "+" ||
+                event.key == "-" ||
+                event.key == "*" ||
+                event.key == "." ||
+                event.key == "/" ||
+                event.key == "%" ||
+                event.key == "(" ||
+                event.key == ")"
+            ) {
+                screenValue += event.key
+                screen.value = screenValue 
+            }
+            
 })
