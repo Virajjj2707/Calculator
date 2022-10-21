@@ -49,5 +49,25 @@ document.getElementById("keydown", function(event){
                 screenValue += event.key
                 screen.value = screenValue 
             }
+            if (event.keyCode == 13 || event.KeyCode == 157) {
+                checkForBracketMulti(); //automatically evaluates the value if no brackets
+                }
+                else if (event.keyCode == 46) {
+                    screenValue == "";
+                    screen.value += screenValue;
+                    console.clear()
+                }
+                else if (event.keyCode == 8) {
+                    screenValue = screenValue.slice(0, -1);
+                    screen.value += screenValue;
+                }
+                else if (event.keyCode == 67){
+                    screenValue = "";
+                    screen.value += screenValue;
+                    console.clear()
+                }
+                else if (event.keyCode == 82){
+                    loacation.reload()
+                }
             
 })
