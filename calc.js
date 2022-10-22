@@ -1,3 +1,23 @@
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+// javascript program for calculator
 
 
 document.getElementById("answer").readOnly = true; //this attribute is set in HTML file
@@ -84,4 +104,23 @@ document.getElementById("keydown", function(event){
                 screenValue = addStr(screen.value, screen.value.indexOf("("), "*");
                 screen.value = eval(screenValue);
         };
+
+        function addStr(str, index, stringToAdd) {
+            return (
+                str.substring(0, index) + stringToAdd + str.substring(index, str.length)
+            );
+        }
+        
+        function checkForBracketMulti() {
+            // Check if there's a number directly infront of a bracket
+            if (
+                screen.value.includes("(") &&
+                !isNaN(screen.value.charAt(screen.value.indexOf("(") - 1))
+            ) {
+                window.onBracketMultiplication();
+                return;
+            } else {
+                screen.value = eval(screenValue);
+            }
+        }
 
