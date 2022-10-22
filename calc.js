@@ -70,4 +70,18 @@ document.getElementById("keydown", function(event){
                     loacation.reload()
                 }
             
-})
+});
+
+        window.onerror  = function() {
+            alert("Please input valid expression")
+            screenValue = "";
+            screen.value = screenValue;
+            console.clear();
+
+        };
+
+         window.onBracketMultiplication = function() {
+                screenValue = addStr(screen.value, screen.value.indexOf("("), "*");
+                screen.value = eval(screenValue);
+        };
+
